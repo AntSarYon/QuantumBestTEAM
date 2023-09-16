@@ -23,10 +23,6 @@ public class Barra : MonoBehaviour
 
     //Flag de "puede recibir daño"
     public bool canHurt = true;
-
-    //Referencia a Destello
-    public Destello destello;
-
     //-----------------------------------------------------------------------
 
     void Start()
