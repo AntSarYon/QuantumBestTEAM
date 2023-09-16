@@ -5,13 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class Coleccionables : MonoBehaviour
 {
-    [SerializeField] private CollectorManager CManager;
+
+    public void Start()
+    {
+        //
+    }
+
+    [Range(0f, 1f)] private float probabilidadTeletransporte;
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player"))
         {
-            CollectorManager.AumentarConteo();
+            //Algo más debe ocurrir aqui
             Destroy(this.gameObject);
         }
     }
