@@ -14,8 +14,7 @@ public class DestelloFollow : MonoBehaviour
     public float tiempoDeDecrecimiento = 2f;
 
     //Referencia a Barra de Vida
-    public Barra barra;
-    public float autoDamage;
+    public Barra energia;
 
     //Flag de Destello
     private bool estaDestellando = false;
@@ -25,11 +24,13 @@ public class DestelloFollow : MonoBehaviour
 
     //Maximo brillo en seteado por defecto
     public float maxBright;
+    public float maxFallOff;
 
     //------------------------------------------------------
 
     private void Awake()
     {
+        energia.SetLightPropeties(destelloLight, maxBright, maxFallOff);
         //Obtenemos referencia al FollowCamera de la particula
         followController = GetComponent<FollowCamera>();
     }
@@ -41,8 +42,8 @@ public class DestelloFollow : MonoBehaviour
         //Si se hace click, y no esta destellando
         if (Input.GetMouseButtonDown(0) && !estaDestellando)
         {
-            barra.canHurt = false;
-            barra.MakeDamage();
+            energia.canHurt = false;
+            energia.MakeDamage();
             StartCoroutine(RealizarDestello());
 
             //Desactivamos la capacidad de Seguir la camara
@@ -63,8 +64,8 @@ public class DestelloFollow : MonoBehaviour
         {
             tiempoPasado += Time.deltaTime;
             float progreso = tiempoPasado / tiempoDeCrecimiento;
-            destelloLight.pointLightOuterRadius = Mathf.Lerp(0f, maxBright, progreso);
-            destelloLight.falloffIntensity = Mathf.Lerp(1f, 0.5f, progreso);
+            destelloLight.pointLightOuterRadius = Mathf.Lerp(0f, energia.intensidadActual, progreso);
+            destelloLight.falloffIntensity = Mathf.Lerp(1f, energia.FallOffActual, progreso);
             yield return null;
         }
 
@@ -77,20 +78,20 @@ public class DestelloFollow : MonoBehaviour
         {
             tiempoPasado += Time.deltaTime;
             float progreso = tiempoPasado / tiempoDeDecrecimiento;
-            destelloLight.pointLightOuterRadius = Mathf.Lerp(maxBright, 0f, progreso);
-            destelloLight.falloffIntensity = Mathf.Lerp(0.5f, 1f, progreso);
+            destelloLight.pointLightOuterRadius = Mathf.Lerp(energia.intensidadActual, 0f, progreso);
+            destelloLight.falloffIntensity = Mathf.Lerp(energia.FallOffActual, 1f, progreso);
             yield return null;
         }
 
         yield return new WaitForSeconds(0.5f);
 
         estaDestellando = false;
-        barra.canHurt = true;
+        energia.canHurt = true;
 
         //Activamos de vuelta la capacidad de Seguir la camara
         followController.CanFollow = true;
 
-        StartCoroutine(barra.TakeRepeatingDamage());
+        StartCoroutine(energia.TakeRepeatingDamage());
         CollectorManager.ChangePrefabPositions();
     }
 }
