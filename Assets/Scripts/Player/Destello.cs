@@ -14,8 +14,7 @@ public class Destello : MonoBehaviour
     public float tiempoDeDecrecimiento = 2f;
 
     //Referencia a Barra de Vida
-    public Barra barra;
-    public float autoDamage;
+    public Barra energia;
 
     //Flag de Destello
     private bool estaDestellando = false;
@@ -25,17 +24,23 @@ public class Destello : MonoBehaviour
 
     //Maximo brillo en seteado por defecto
     public float maxBright;
+    public float maxFallOff;
 
 
     //--------------------------------------------------------------------------
 
-    void Update()
+    private void Awake()
+    {
+        energia.SetLightPropeties(destelloLight, maxBright, maxFallOff);
+    }
+
+    private void Update()
     {
         //Si se hace click, y no se esta destellando
         if (Input.GetMouseButtonDown(0) && !estaDestellando)
         {
-            barra.canHurt = false;
-            barra.TakeDamage(autoDamage);
+            energia.canHurt = false;
+            energia.MakeDamage();
             StartCoroutine(RealizarDestello());
             playerMovement.canWalk = false;
         }
@@ -54,8 +59,8 @@ public class Destello : MonoBehaviour
         {
             tiempoPasado += Time.deltaTime;
             float progreso = tiempoPasado / tiempoDeCrecimiento;
-            destelloLight.pointLightOuterRadius = Mathf.Lerp(0f, maxBright, progreso);
-            destelloLight.falloffIntensity = Mathf.Lerp(1f, 0.5f, progreso);
+            destelloLight.pointLightOuterRadius = Mathf.Lerp(0f, energia.intensidadActual, progreso);
+            destelloLight.falloffIntensity = Mathf.Lerp(1f, energia.FallOffActual, progreso);
             yield return null;
         }
 
@@ -68,17 +73,17 @@ public class Destello : MonoBehaviour
         {
             tiempoPasado += Time.deltaTime;
             float progreso = tiempoPasado / tiempoDeDecrecimiento;
-            destelloLight.pointLightOuterRadius = Mathf.Lerp(maxBright, 0f, progreso);
-            destelloLight.falloffIntensity = Mathf.Lerp(0.5f, 1f, progreso);
+            destelloLight.pointLightOuterRadius = Mathf.Lerp(energia.intensidadActual, 0f, progreso);
+            destelloLight.falloffIntensity = Mathf.Lerp(energia.FallOffActual, 1f, progreso);
             yield return null;
         }
 
         yield return new WaitForSeconds(0.5f);
 
         estaDestellando = false;
-        barra.canHurt = true;
+        energia.canHurt = true;
         playerMovement.canWalk = true;
-        StartCoroutine(barra.TakeRepeatingDamage());
+        StartCoroutine(energia.TakeRepeatingDamage());
         CollectorManager.ChangePrefabPositions();
     }
 }

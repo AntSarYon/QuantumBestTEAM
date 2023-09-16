@@ -42,7 +42,7 @@ public class DestelloFollow : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !estaDestellando)
         {
             barra.canHurt = false;
-            barra.TakeDamage(autoDamage);
+            barra.MakeDamage();
             StartCoroutine(RealizarDestello());
 
             //Desactivamos la capacidad de Seguir la camara

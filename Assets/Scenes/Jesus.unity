@@ -305,10 +305,10 @@ MonoBehaviour:
   destelloLight: {fileID: 1903108091}
   tiempoDeCrecimiento: 0.1
   tiempoDeDecrecimiento: 1.5
-  barra: {fileID: 165055213}
-  autoDamage: 10
+  energia: {fileID: 165055213}
   playerMovement: {fileID: 165055211}
-  maxBright: 10
+  maxBright: 30
+  maxFallOff: 0.5
 --- !u!114 &165055213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,11 +321,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddbcf87d09c9532449a83c695b6beba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  autoHurt: 1
-  healthBar: {fileID: 1549650537}
+  ligth2D: {fileID: 0}
+  afeccionGradualIntensidad: 0
+  intensidadMaxima: 0
+  intensidadActual: 0
+  damageLight: 0
+  afeccionGradualFallOff: 0
+  FallOffMaxima: 0
+  FallOffActual: 0
+  damageFallOff: 0
   canHurt: 1
+  destello: {fileID: 0}
 --- !u!1 &282234135
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,9 +1365,9 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 1
+  m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -1383,7 +1389,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 0
+  m_PointLightOuterRadius: 30
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
