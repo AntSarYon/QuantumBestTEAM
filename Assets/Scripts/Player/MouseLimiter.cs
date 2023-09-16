@@ -6,7 +6,7 @@ public class MouseLimiter : MonoBehaviour
 {
     public static MouseLimiter Instance;
 
-    //Coordenadas del Mouse
+    //Coordenadas del Mouse (en el Mundo)
     private Vector2 coorMouse;
 
     #region GETTERS Y SETTERS
@@ -47,6 +47,8 @@ public class MouseLimiter : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
+
+        Cursor.visible = false;
     }
 
     //-----------------------------------------------------------

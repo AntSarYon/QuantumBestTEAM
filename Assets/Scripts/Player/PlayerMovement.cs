@@ -11,10 +11,15 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 velocidadDeseada = Vector2.zero;
 
-    void Start()
+
+    //----------------------------------------------------------------------------
+
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
+
+    //----------------------------------------------------------------------------
 
     void Update()
     {

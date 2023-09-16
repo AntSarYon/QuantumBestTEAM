@@ -6,16 +6,25 @@ using UnityEngine.Rendering.Universal;
 
 public class Destello : MonoBehaviour
 {
+    //Componente de Luz
     public Light2D destelloLight;
+
+    //Tiempos de Luz
     public float tiempoDeCrecimiento = 0.5f;
     public float tiempoDeDecrecimiento = 2f;
+
+    //Referencia a Barra de Vida
     public Barra barra;
     public float autoDamage;
 
+    //Flag de Destello
     private bool estaDestellando = false;
+
+    //--------------------------------------------------------------------------
 
     void Update()
     {
+        //Si se hace click, y no se esta destellando
         if (Input.GetMouseButtonDown(0) && !estaDestellando)
         {
             barra.canHurt = false;
@@ -23,6 +32,8 @@ public class Destello : MonoBehaviour
             StartCoroutine(RealizarDestello());
         }
     }
+
+    //--------------------------------------------------------------------------
 
     IEnumerator RealizarDestello()
     {
