@@ -289,6 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadMovimiento: 5
   suavidadMovimiento: 10
+  canWalk: 0
 --- !u!114 &165055212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,6 +306,9 @@ MonoBehaviour:
   tiempoDeCrecimiento: 0.1
   tiempoDeDecrecimiento: 1.5
   barra: {fileID: 165055213}
+  autoDamage: 10
+  playerMovement: {fileID: 165055211}
+  maxBright: 10
 --- !u!114 &165055213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  autoHurt: 1
   healthBar: {fileID: 1549650537}
   canHurt: 1
 --- !u!1 &282234135
@@ -454,11 +459,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 165055207}
-  prefabToSpawn: {fileID: 1769602089393601056, guid: a3119c4df81c83344a0034e5924054c3, type: 3}
+  prefabToSpawn:
+  - {fileID: 1769602089393601056, guid: a3119c4df81c83344a0034e5924054c3, type: 3}
+  - {fileID: 1769602089393601056, guid: e22823e9ab5069e488d575fad05809aa, type: 3}
+  - {fileID: 1769602089393601056, guid: 6274fc851472e1941981679f331757fc, type: 3}
+  - {fileID: 1769602089393601056, guid: 7ebe8dcd80218ca4fa1d2770d3044098, type: 3}
+  - {fileID: 1769602089393601056, guid: 26603653d4682364aaec40dc03d27fef, type: 3}
+  - {fileID: 1769602089393601056, guid: 10407522629d4ff45b005f9b2f3aed6d, type: 3}
+  - {fileID: 1769602089393601056, guid: 85f3d38e0d9746342ba7c4c5cdd01600, type: 3}
+  - {fileID: 1769602089393601056, guid: 2a170de3f82c600448b70ed9fea2d7d3, type: 3}
+  - {fileID: 1769602089393601056, guid: 3b7ddfb964e695847ba1af95b665fe2a, type: 3}
   spawnAreaSprite: {fileID: 1789414138}
   minimumDistanceOfSeparation: 50
-  maxPrefabsSpawned: 9
-  changeProbability: 0.3
+  changeProbability: 1
 --- !u!1 &400221170
 GameObject:
   m_ObjectHideFlags: 3
@@ -891,7 +904,7 @@ GameObject:
   - component: {fileID: 1134306649}
   - component: {fileID: 1134306648}
   m_Layer: 0
-  m_Name: Light 2D
+  m_Name: GlobalLight 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -914,7 +927,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.64
+  m_Intensity: 0
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000

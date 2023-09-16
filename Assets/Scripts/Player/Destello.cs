@@ -20,6 +20,13 @@ public class Destello : MonoBehaviour
     //Flag de Destello
     private bool estaDestellando = false;
 
+    //Control de movimiento del jugador
+    public PlayerMovement playerMovement;
+
+    //Maximo brillo en seteado por defecto
+    public float maxBright;
+
+
     //--------------------------------------------------------------------------
 
     void Update()
@@ -30,6 +37,7 @@ public class Destello : MonoBehaviour
             barra.canHurt = false;
             barra.TakeDamage(autoDamage);
             StartCoroutine(RealizarDestello());
+            playerMovement.canWalk = false;
         }
     }
 
@@ -46,7 +54,7 @@ public class Destello : MonoBehaviour
         {
             tiempoPasado += Time.deltaTime;
             float progreso = tiempoPasado / tiempoDeCrecimiento;
-            destelloLight.pointLightOuterRadius = Mathf.Lerp(0f, 10f, progreso);
+            destelloLight.pointLightOuterRadius = Mathf.Lerp(0f, maxBright, progreso);
             destelloLight.falloffIntensity = Mathf.Lerp(1f, 0.5f, progreso);
             yield return null;
         }
@@ -60,7 +68,7 @@ public class Destello : MonoBehaviour
         {
             tiempoPasado += Time.deltaTime;
             float progreso = tiempoPasado / tiempoDeDecrecimiento;
-            destelloLight.pointLightOuterRadius = Mathf.Lerp(10f, 0f, progreso);
+            destelloLight.pointLightOuterRadius = Mathf.Lerp(maxBright, 0f, progreso);
             destelloLight.falloffIntensity = Mathf.Lerp(0.5f, 1f, progreso);
             yield return null;
         }
@@ -69,6 +77,7 @@ public class Destello : MonoBehaviour
 
         estaDestellando = false;
         barra.canHurt = true;
+        playerMovement.canWalk = true;
         StartCoroutine(barra.TakeRepeatingDamage());
         CollectorManager.ChangePrefabPositions();
     }

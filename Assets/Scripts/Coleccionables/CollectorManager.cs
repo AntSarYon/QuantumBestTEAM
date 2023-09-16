@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,10 +8,9 @@ using UnityEngine.SceneManagement;
 public class CollectorManager : MonoBehaviour
 {
     public Transform player;
-    public GameObject prefabToSpawn;
+    public GameObject[] prefabToSpawn;
     public SpriteRenderer spawnAreaSprite;
     public float minimumDistanceOfSeparation;
-    public int maxPrefabsSpawned;
     [Range(0f,1f)] public float changeProbability;
 
     private List<Transform> spawnedPrefabs = new List<Transform>();
@@ -44,7 +44,7 @@ public class CollectorManager : MonoBehaviour
 
     void SpawnPrefabsRandomly()
     {
-        while (spawnedPrefabs.Count < maxPrefabsSpawned)
+        while (spawnedPrefabs.Count < prefabToSpawn.Length)
         {
             // Genera una posición aleatoria dentro del área circular del sprite.
             Vector2 randomPosition = Random.insideUnitCircle * spawnRadius;
@@ -54,7 +54,7 @@ public class CollectorManager : MonoBehaviour
             if (IsPositionValid(spawnPosition))
             {
                 // Crea el prefab en la posición válida.
-                Transform newPrefab = Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity).transform;
+                Transform newPrefab = Instantiate(prefabToSpawn[spawnedPrefabs.Count], spawnPosition, Quaternion.identity).transform;
                 spawnedPrefabs.Add(newPrefab);
             }
         }

@@ -11,22 +11,44 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 velocidadDeseada = Vector2.zero;
 
+    private float movimientoHorizontal;
+    private float movimientoVertical;
+
+    public bool canWalk;
 
     //----------------------------------------------------------------------------
 
-    void Awake()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
     //----------------------------------------------------------------------------
 
-    void Update()
+    private void Start()
     {
-        // Obtener la entrada del jugador en los ejes horizontal y vertical.
-        float movimientoHorizontal = Input.GetAxis("Horizontal");
-        float movimientoVertical = Input.GetAxis("Vertical");
+        Invoke("StartMovement", 2f);
+    }
 
+    //----------------------------------------------------------------------------
+    private void Update()
+    {
+        if(canWalk)
+        {
+            // Obtener la entrada del jugador en los ejes horizontal y vertical.
+            movimientoHorizontal = Input.GetAxis("Horizontal");
+            movimientoVertical = Input.GetAxis("Vertical");
+        }
+        else
+        {
+            movimientoHorizontal = 0f;
+            movimientoVertical = 0f;
+            rb.velocity = Vector2.zero;
+        }
+    }
+
+    void FixedUpdate()
+    {
         // Crear un vector de movimiento usando la entrada del jugador.
         Vector2 movimiento = new Vector2(movimientoHorizontal, movimientoVertical);
 
@@ -38,5 +60,10 @@ public class PlayerMovement : MonoBehaviour
 
         // Mover el jugador usando Rigidbody2D.
         rb.velocity = velocidadDeseada;
+    }
+
+    public void StartMovement()
+    {
+        canWalk = true;
     }
 }
