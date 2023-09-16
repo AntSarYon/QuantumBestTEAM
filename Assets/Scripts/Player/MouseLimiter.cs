@@ -34,7 +34,7 @@ public class MouseLimiter : MonoBehaviour
 
     void Update()
     {
-        //Acrtualizamos coordenadas X e Y del Mouse
+        //Capturamos coordenadas X e Y del Mouse (en el mundo)
         coorMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
