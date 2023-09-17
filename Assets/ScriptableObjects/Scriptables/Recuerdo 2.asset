@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d423fd1bde921014cbbeff03d486864c, type: 3}
+  m_Name: Recuerdo 2
+  m_EditorClassIdentifier: 
+  ID_recuerdo: 2
+  TituloRecuerdo: ADOLESCENCE (14 years, 1940)
+  DescripcionRecuerdo: Zack is building an experimental volcano at his house. Initially,
+    it fails, and Zack stays up all night working on it. At the science fair, the
+    volcano works, and the judges applaud. Zack smiles shyly, and Ana appears, giving
+    him a big hug. After the hug, Ana shakes his hand shyly.
+  activado: 0

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d423fd1bde921014cbbeff03d486864c, type: 3}
+  m_Name: Recuerdo 1
+  m_EditorClassIdentifier: 
+  ID_recuerdo: 1
+  TituloRecuerdo: CHILDHOOD (7 years, 1932)
+  DescripcionRecuerdo: "Zacar\xEDas watches with longing as a group of children play
+    marbles. A stray marble rolls to his feet, and he picks it up. Ana approaches,
+    and he hands it to her. With a smile, she takes his hand, inviting him to play
+    with her friends."
+  activado: 0

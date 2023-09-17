@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d423fd1bde921014cbbeff03d486864c, type: 3}
+  m_Name: Recuerdo 5
+  m_EditorClassIdentifier: 
+  ID_recuerdo: 5
+  TituloRecuerdo: GRIEF (85 years, 2011)
+  DescripcionRecuerdo: Zack takes Ana's hand as she lies in bed. On the nightstand,
+    the vase of sunflowers, mended with glue, holds withered blossoms. Ana doesn't
+    open her eyes.
+  activado: 0

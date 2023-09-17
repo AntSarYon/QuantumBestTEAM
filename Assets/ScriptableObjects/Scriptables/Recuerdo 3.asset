@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d423fd1bde921014cbbeff03d486864c, type: 3}
+  m_Name: Recuerdo 3
+  m_EditorClassIdentifier: 
+  ID_recuerdo: 3
+  TituloRecuerdo: WORK (23 years, 1949)
+  DescripcionRecuerdo: Zack, dressed in a suit, is preparing for an upcoming job
+    interview. Frustrated while trying to knot his tie, he catches the eye of Ana,
+    who watches from afar with a tender smile. Eventually, Zack turns to Ana for
+    help, and she skillfully knots his tie. With a smile and a sense of relief, Zack
+    says goodbye to Ana and heads out for his interview.
+  activado: 0

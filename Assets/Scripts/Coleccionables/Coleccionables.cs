@@ -5,19 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class Coleccionables : MonoBehaviour
 {
-
+    [SerializeField] private int recuerdoID;
+    [SerializeField] private bool activado;
+    [SerializeField] private ScriptableR recuerdoScriptable;
     public void Start()
     {
-        //
+        
     }
 
-    [Range(0f, 1f)] private float probabilidadTeletransporte;
+    
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player"))
         {
             //Algo más debe ocurrir aqui
+            recuerdoScriptable.activado = true;
+            Debug.Log("Recuerdo numero " + recuerdoID);
             Destroy(this.gameObject);
         }
     }
