@@ -121,7 +121,7 @@ public class UIInicioController : MonoBehaviour
     public void CargarOpcion()
     {
         if (gallerySelected) ScenesManager.Instance.SolicitarCambioDeEscena("GALERIA");
-        else if (playSelected) ScenesManager.Instance.SolicitarCambioDeEscena("GAME");
+        else if (playSelected) ScenesManager.Instance.SolicitarCambioDeEscena("Integracion");
         else if (quitSelected)
         {
             Application.Quit();
