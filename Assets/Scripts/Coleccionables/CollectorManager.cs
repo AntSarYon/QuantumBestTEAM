@@ -32,7 +32,7 @@ public class CollectorManager : MonoBehaviour
     void Start()
     {
         // Obtiene el radio del sprite circular.
-        spawnRadius = spawnAreaSprite.bounds.extents.x - 100f;
+        spawnRadius = spawnAreaSprite.bounds.extents.x - 20f;
 
         SpawnPrefabsRandomly();
     }
