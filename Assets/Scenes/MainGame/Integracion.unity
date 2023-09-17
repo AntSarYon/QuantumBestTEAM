@@ -329,7 +329,7 @@ MonoBehaviour:
   tiempoDeDecrecimiento: 1.5
   energia: {fileID: 165055213}
   followController: {fileID: 0}
-  maxBright: 10
+  maxBright: 20
   maxFallOff: 0
 --- !u!114 &165055217
 MonoBehaviour:
@@ -541,7 +541,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -701,7 +701,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_LocalScale: {x: 100, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1214190632}
@@ -752,7 +752,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1539cf62ae44ee54fac6855288dc6ccd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 092a0f4a8f9bb504ea1c3cbb9e271ad5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1156,7 +1156,7 @@ MonoBehaviour:
   - {fileID: 1769602089393601056, guid: 10407522629d4ff45b005f9b2f3aed6d, type: 3}
   - {fileID: 1769602089393601056, guid: 85f3d38e0d9746342ba7c4c5cdd01600, type: 3}
   spawnAreaSprite: {fileID: 842710696}
-  minimumDistanceOfSeparation: 15
+  minimumDistanceOfSeparation: 50
   changeProbability: 0.35
 --- !u!4 &1056776538
 Transform:
