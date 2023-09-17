@@ -25,11 +25,6 @@ public class TextManager : MonoBehaviour
             {
                 NextLine();
             }
-            else
-            {
-                StopAllCoroutines();
-                textComponent.text = lines[index];
-            }
         }
     }
 

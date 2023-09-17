@@ -687,15 +687,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1852540262}
   lines:
-  - UwU
+  - UwUuwuwuwuwuuuwuw
   - You Are not Welcome
-  - UwU
-  textSpeed: 0.2
+  - UwUuwuwuwuwuuuwuw
+  textSpeed: 0.05
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 28196995}
   - {fileID: 1894798520}
-  - {fileID: 1093314445}
   - {fileID: 1470118092}
+  - {fileID: 1093314445}
