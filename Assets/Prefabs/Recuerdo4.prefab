@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: a26d09260db79784492351878f8f780b, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.41573143, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -148,7 +148,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 248799cb4acba48f7b3ee842a80f788c, type: 2}
-  m_audioClip: {fileID: 8300000, guid: f73d1f32a53637947b92188bc9bc3281, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ffd87e940726d324aa443a15b24029dd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -158,10 +158,10 @@ AudioSource:
   SpatializePostEffects: 1
   Priority: 60
   DopplerLevel: 0.66
-  MinDistance: 2
-  MaxDistance: 8
+  MinDistance: 1
+  MaxDistance: 3
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -194,7 +194,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.951
+      value: 0.981
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -224,7 +224,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.711
       inSlope: 0
       outSlope: 0
       tangentMode: 0
