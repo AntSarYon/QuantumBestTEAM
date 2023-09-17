@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class UIInicioController : MonoBehaviour
 {
@@ -22,12 +23,21 @@ public class UIInicioController : MonoBehaviour
         blackPanel.SetAsFirstSibling();
     }
 
+    public void PonerPanelNegroDelante()
+    {
+        blackPanel.SetAsLastSibling();
+    }
+
+    //-------------------------------------------
+
     public void TerminarIntro()
     {
         mAnimator.SetBool("IntroFinalizada", true);
     }
 
     //------------------------------------------
+
+    #region ACTIVACION y DESACTIVACION de BOTONES
 
     public void ActivarBtnPLay()
     {
@@ -57,5 +67,17 @@ public class UIInicioController : MonoBehaviour
     public void DesactivarBtnExit()
     {
         mAnimator.SetBool("QuitON", false);
+    }
+
+    #endregion
+
+    //-------------------------------------------
+
+    public void IrAGaleria()
+    {
+        //Disparamos el Trigger para el FadeIn
+        PonerPanelNegroDelante();
+        mAnimator.SetTrigger("FadeIn");
+        ScenesManager.Instance.SolicitarCambioDeEscena("GALERIA");
     }
 }
