@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 165055214}
   - component: {fileID: 165055216}
   - component: {fileID: 165055213}
+  - component: {fileID: 165055217}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -330,62 +331,14 @@ MonoBehaviour:
   followController: {fileID: 0}
   maxBright: 10
   maxFallOff: 0
---- !u!1 &340703062
-GameObject:
+--- !u!81 &165055217
+AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 340703064}
-  - component: {fileID: 340703065}
-  m_Layer: 0
-  m_Name: Logica coleccional
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &340703064
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340703062}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.434901, y: 0.81643236, z: -10.080232}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &340703065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340703062}
+  m_GameObject: {fileID: 165055205}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 543d4484011080d4287a09ea8da1992d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 165055207}
-  prefabToSpawn:
-  - {fileID: 1769602089393601056, guid: a3119c4df81c83344a0034e5924054c3, type: 3}
-  - {fileID: 1769602089393601056, guid: e22823e9ab5069e488d575fad05809aa, type: 3}
-  - {fileID: 1769602089393601056, guid: 6274fc851472e1941981679f331757fc, type: 3}
-  - {fileID: 1769602089393601056, guid: 7ebe8dcd80218ca4fa1d2770d3044098, type: 3}
-  - {fileID: 1769602089393601056, guid: 26603653d4682364aaec40dc03d27fef, type: 3}
-  - {fileID: 1769602089393601056, guid: 10407522629d4ff45b005f9b2f3aed6d, type: 3}
-  - {fileID: 1769602089393601056, guid: 85f3d38e0d9746342ba7c4c5cdd01600, type: 3}
-  spawnAreaSprite: {fileID: 1452634202}
-  minimumDistanceOfSeparation: 50
-  changeProbability: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,7 +367,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,7 +471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: -1e-45, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 1e-45, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1265,7 +1218,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189702111}
   serializedVersion: 2
-  m_LocalRotation: {x: -1e-45, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 1e-45, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1539,7 +1492,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -73.55543, y: 63.23501, z: 0}
-  m_LocalScale: {x: 30, y: 30, z: 1}
+  m_LocalScale: {x: 150, y: 150, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1298880788}
@@ -1743,7 +1696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2027756255
 Transform:
   m_ObjectHideFlags: 0
@@ -1895,7 +1848,6 @@ SceneRoots:
   - {fileID: 1804554682}
   - {fileID: 165055207}
   - {fileID: 825841101}
-  - {fileID: 340703064}
   - {fileID: 1163918086}
   - {fileID: 938814853}
   - {fileID: 1134306649}

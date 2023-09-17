@@ -8,9 +8,11 @@ public class Coleccionables : MonoBehaviour
     [SerializeField] private int recuerdoID;
     [SerializeField] private bool activado;
     [SerializeField] private ScriptableR recuerdoScriptable;
+    [SerializeField] private AudioSource audioS;
+
     public void Start()
     {
-        
+        audioS = GetComponent<AudioSource>();
     }
 
     
