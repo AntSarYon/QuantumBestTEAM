@@ -31,6 +31,8 @@ public class Coleccionables : MonoBehaviour
             //Algo más debe ocurrir aqui
             recuerdoScriptable.activado = true;
             Debug.Log("Recuerdo numero " + recuerdoID);
+            GameManager.Instance.ActivarRecuerdo(recuerdoID);
+
             GameManager.Instance.ReproducirRecuerdoConseguido();
             gameObject.SetActive(false);
         }

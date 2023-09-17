@@ -4,9 +4,39 @@ using UnityEngine;
 
 public class UI_InGame_Controller : MonoBehaviour
 {
+    public static UI_InGame_Controller Instance;
 
     private Animator mAnimator;
     [SerializeField] Transform blackPanel;
+
+    //-------------------------------------------
+
+     void Awake()
+    {
+        Instance = this;
+
+        mAnimator = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Z))
+        {
+            MostrarMemoriaUno();
+            GameManager.Instance.ReproducirRecuerdoConseguido();
+        }
+        if (Input.GetKey(KeyCode.X))
+        {
+            MostrarMemoriaDos();
+            GameManager.Instance.ReproducirRecuerdoConseguido();
+        }
+        if (Input.GetKey(KeyCode.C))
+        {
+            MostrarMemoriaTres();
+            GameManager.Instance.ReproducirRecuerdoConseguido();
+        }
+
+    }
 
     //-------------------------------------------
 

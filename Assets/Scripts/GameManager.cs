@@ -27,6 +27,38 @@ public class GameManager : MonoBehaviour
         mAudioSource.PlayOneShot(clipsRecuerdos[Random.Range(0, 1)],0.55f);
     }
 
+    public void ActivarRecuerdo(int i)
+    {
+        switch (i)
+        {
+            case 1:
+                UI_InGame_Controller.Instance.MostrarMemoriaUno();
+                break;
+            case 2:
+                UI_InGame_Controller.Instance.MostrarMemoriaDos();
+                break;
+            case 3:
+                UI_InGame_Controller.Instance.MostrarMemoriaTres();
+                break;
+            case 4:
+                UI_InGame_Controller.Instance.MostrarMemoriaCuatro();
+                break;
+            case 5:
+                UI_InGame_Controller.Instance.MostrarMemoriaCinco();
+                break;
+            case 6:
+                UI_InGame_Controller.Instance.MostrarMemoriaSeis();
+                break;
+            case 7:
+                UI_InGame_Controller.Instance.MostrarMemoriaSiete();
+                break;
+
+            default:
+                break;
+
+        }
+    }
+
     //------------------------------------------------------------
 
     private void ControlarUnicaInstancia()
