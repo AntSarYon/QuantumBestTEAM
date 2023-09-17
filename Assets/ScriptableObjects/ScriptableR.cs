@@ -10,4 +10,5 @@ public class ScriptableR : ScriptableObject
     public string TituloRecuerdo;
     public string DescripcionRecuerdo;
     public bool activado = false;
+    public AudioClip clipRecuerdo;
 }

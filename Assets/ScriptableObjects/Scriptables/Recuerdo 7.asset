@@ -19,3 +19,4 @@ MonoBehaviour:
     moves away. Alone in the kitchen, his fading memories hold him captive. His son
     approaches and gives him a marble. Zack cries as he remembers.
   activado: 0
+  clipRecuerdo: {fileID: 8300000, guid: 9bbbabf397306a1438ba9ffb175cf09e, type: 3}
