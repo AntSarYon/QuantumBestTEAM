@@ -19,3 +19,4 @@ MonoBehaviour:
     volcano works, and the judges applaud. Zack smiles shyly, and Ana appears, giving
     him a big hug. After the hug, Ana shakes his hand shyly.
   activado: 0
+  clipRecuerdo: {fileID: 8300000, guid: a4da3c5cf8e9479489fe083242cbd6cf, type: 3}

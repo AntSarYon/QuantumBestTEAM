@@ -18,3 +18,4 @@ MonoBehaviour:
     the vase of sunflowers, mended with glue, holds withered blossoms. Ana doesn't
     open her eyes.
   activado: 0
+  clipRecuerdo: {fileID: 8300000, guid: 33a7c7770c6816e4abb2a44fb40f8d13, type: 3}

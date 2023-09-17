@@ -20,3 +20,4 @@ MonoBehaviour:
     glue. Zack, witnessing her effort, feels a sense of joy and joins Ana in repairing
     the vase together. '
   activado: 0
+  clipRecuerdo: {fileID: 8300000, guid: 27c2f324794002e4386d41e0def358fc, type: 3}
