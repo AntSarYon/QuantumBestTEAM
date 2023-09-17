@@ -34,6 +34,10 @@ public class UIGaleriaController : MonoBehaviour
         //Disparamos el Trigger para el FadeIn
         PonerPanelNegroDelante();
         mAnimator.SetTrigger("FadeIn");
-        ScenesManager.Instance.SolicitarCambioDeEscena("MainMenu");
+    }
+
+    public void CargarMainMenu()
+    {
+        ScenesManager.Instance.SolicitarCambioDeEscena("MAINMENU");
     }
 }

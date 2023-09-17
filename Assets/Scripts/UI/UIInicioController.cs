@@ -8,11 +8,24 @@ public class UIInicioController : MonoBehaviour
     private Animator mAnimator;
     [SerializeField] Transform blackPanel;
 
+    private bool gallerySelected;
+    private bool playSelected;
+    private bool quitSelected;
+
     //-------------------------------------------
 
-    private void Awake()
+    void Awake()
     {
         mAnimator = GetComponent<Animator>();
+    }
+
+    //-------------------------------------------
+
+    void Start()
+    {
+        gallerySelected = false;
+        playSelected = false;
+        quitSelected = false;
     }
 
 
@@ -78,6 +91,33 @@ public class UIInicioController : MonoBehaviour
         //Disparamos el Trigger para el FadeIn
         PonerPanelNegroDelante();
         mAnimator.SetTrigger("FadeIn");
-        ScenesManager.Instance.SolicitarCambioDeEscena("GALERIA");
+        gallerySelected = true;
     }
+
+    public void EmpezarJuego()
+    {
+        //Disparamos el Trigger para el FadeIn
+        PonerPanelNegroDelante();
+        mAnimator.SetTrigger("FadeIn");
+        playSelected = true;
+    }
+
+    public void SalirDelJuego()
+    {
+        //Disparamos el Trigger para el FadeIn
+        PonerPanelNegroDelante();
+        mAnimator.SetTrigger("FadeIn");
+        quitSelected = true;
+    }
+
+    public void CargarOpcion()
+    {
+        if (gallerySelected) ScenesManager.Instance.SolicitarCambioDeEscena("GALERIA");
+        else if (playSelected) ScenesManager.Instance.SolicitarCambioDeEscena("GAME");
+        else if (quitSelected)
+        {
+            Application.Quit();
+        }
+    }
+    
 }
