@@ -8,6 +8,9 @@ public class UIInicioController : MonoBehaviour
     private Animator mAnimator;
     [SerializeField] Transform blackPanel;
 
+    private AudioSource mAudioSource;
+    [SerializeField] private AudioClip clipHover;
+
     private bool gallerySelected;
     private bool playSelected;
     private bool quitSelected;
@@ -16,7 +19,9 @@ public class UIInicioController : MonoBehaviour
 
     void Awake()
     {
+        //Obtenemos referencias
         mAnimator = GetComponent<Animator>();
+        mAudioSource = GetComponent<AudioSource>();
     }
 
     //-------------------------------------------
@@ -55,6 +60,7 @@ public class UIInicioController : MonoBehaviour
     public void ActivarBtnPLay()
     {
         mAnimator.SetBool("PlayON", true);
+        mAudioSource.PlayOneShot(clipHover, 0.75f);
     }
 
     public void DesactivarBtnPlay()
@@ -65,6 +71,7 @@ public class UIInicioController : MonoBehaviour
     public void ActivarBtnGallery()
     {
         mAnimator.SetBool("GalleryON", true);
+        mAudioSource.PlayOneShot(clipHover, 0.75f);
     }
 
     public void DesactivarBtnGallery()
@@ -75,6 +82,7 @@ public class UIInicioController : MonoBehaviour
     public void ActivarBtnExit()
     {
         mAnimator.SetBool("QuitON", true);
+        mAudioSource.PlayOneShot(clipHover, 0.75f);
     }
 
     public void DesactivarBtnExit()
