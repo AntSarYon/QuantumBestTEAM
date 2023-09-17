@@ -43,6 +43,7 @@ public class UI_InGame_Controller : MonoBehaviour
     public void PonerPanelNegroDetras()
     {
         blackPanel.SetAsFirstSibling();
+        blackPanel.gameObject.SetActive(false);
     }
 
     public void PonerPanelNegroDelante()

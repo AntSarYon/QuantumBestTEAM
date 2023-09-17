@@ -49,7 +49,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0833334
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -61,7 +61,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: Memoria3
+    path: Memoria1
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 0
@@ -83,21 +83,19 @@ AnimationClip:
     - time: 0.5
       value: {fileID: 21300000, guid: 3df492b1af393a04ea72578094319974, type: 3}
     - time: 0.5833333
-      value: {fileID: 21300000, guid: 3df492b1af393a04ea72578094319974, type: 3}
-    - time: 0.6666667
       value: {fileID: 21300000, guid: a2acff7e6817c1242a0ad70a61cf95dd, type: 3}
-    - time: 0.75
+    - time: 0.6666667
       value: {fileID: 21300000, guid: d30f19bf8a10fa44a8c2646e89492de1, type: 3}
-    - time: 0.8333333
+    - time: 0.75
       value: {fileID: 21300000, guid: 68d5ebb9c69ba5848903b78b976b1444, type: 3}
-    - time: 0.9166667
+    - time: 0.8333333
       value: {fileID: 21300000, guid: c8242e5d8aac68e47bc2aa7f6180b978, type: 3}
-    - time: 1
+    - time: 0.9166667
       value: {fileID: 21300000, guid: c50f5304dd5f3984d85e31e9ab6458b9, type: 3}
-    - time: 1.0833334
+    - time: 1
       value: {fileID: 21300000, guid: aa516d200e02c6d40899d5c3c022844d, type: 3}
     attribute: m_Sprite
-    path: Memoria3
+    path: Memoria1
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 2
@@ -109,7 +107,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3829019719
+      path: 171201899
       attribute: 304273561
       script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
       typeID: 114
@@ -118,7 +116,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3829019719
+      path: 171201899
       attribute: 2015549526
       script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
       typeID: 114
@@ -134,7 +132,6 @@ AnimationClip:
     - {fileID: 21300000, guid: d30f19bf8a10fa44a8c2646e89492de1, type: 3}
     - {fileID: 21300000, guid: a2acff7e6817c1242a0ad70a61cf95dd, type: 3}
     - {fileID: 21300000, guid: 3df492b1af393a04ea72578094319974, type: 3}
-    - {fileID: 21300000, guid: 3df492b1af393a04ea72578094319974, type: 3}
     - {fileID: 21300000, guid: a2acff7e6817c1242a0ad70a61cf95dd, type: 3}
     - {fileID: 21300000, guid: d30f19bf8a10fa44a8c2646e89492de1, type: 3}
     - {fileID: 21300000, guid: 68d5ebb9c69ba5848903b78b976b1444, type: 3}
@@ -146,7 +143,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.1
+    m_StopTime: 1.0166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -194,7 +191,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0833334
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -206,7 +203,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: Memoria3
+    path: Memoria1
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 0
@@ -215,13 +212,6 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: PonerPanelNegroDetras
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 1.1
     functionName: PonerPanelNegroDetras
     data: 
     objectReferenceParameter: {fileID: 0}
