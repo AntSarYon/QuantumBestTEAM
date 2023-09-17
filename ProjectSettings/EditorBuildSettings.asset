@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainGame/MAINMENU.unity
     guid: bf7dd7a3f6438bf4c97ffbb0194a9495
+  - enabled: 1
+    path: Assets/Scenes/MainGame/Integracion.unity
+    guid: b6b473ae30530364f819678da0d3260a
+  - enabled: 1
+    path: Assets/Scenes/MainGame/CARTA.unity
+    guid: 2c0914a22c913c64f877b021e1df3533
   m_configObjects: {}
