@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     public void ReproducirRecuerdoConseguido()
     {
-        mAudioSource.PlayOneShot(clipsRecuerdos[Random.Range(0, 1)],0.55f);
+        mAudioSource.PlayOneShot(clipsRecuerdos[Random.Range(0, 1)],0.20f);
     }
 
     public void ActivarRecuerdo(int i)

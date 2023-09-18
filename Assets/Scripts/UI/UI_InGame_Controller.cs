@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class UI_InGame_Controller : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class UI_InGame_Controller : MonoBehaviour
     private Animator mAnimator;
     [SerializeField] Transform blackPanel;
 
+    private int contRecuerdos;
+
     //-------------------------------------------
 
      void Awake()
@@ -16,6 +19,7 @@ public class UI_InGame_Controller : MonoBehaviour
         Instance = this;
 
         mAnimator = GetComponent<Animator>();
+        contRecuerdos = 0;
     }
 
     private void Update()
@@ -36,7 +40,21 @@ public class UI_InGame_Controller : MonoBehaviour
             GameManager.Instance.ReproducirRecuerdoConseguido();
         }
 
+        if (contRecuerdos == 7)
+        {
+            mAnimator.SetTrigger("Complete");
+
+            Invoke(nameof(IrACreditos),2f);
+            
+        }
+
     }
+
+    public void IrACreditos()
+    {
+        ScenesManager.Instance.SolicitarCambioDeEscena("CREDITS");
+    }
+    
 
     //-------------------------------------------
 
@@ -56,35 +74,42 @@ public class UI_InGame_Controller : MonoBehaviour
     public void MostrarMemoriaUno()
     {
         mAnimator.SetTrigger("Memoria1");
+        contRecuerdos++;
     }
 
     public void MostrarMemoriaDos()
     {
         mAnimator.SetTrigger("Memoria2");
+        contRecuerdos++;
     }
 
     public void MostrarMemoriaTres()
     {
         mAnimator.SetTrigger("Memoria3");
+        contRecuerdos++;
     }
 
     public void MostrarMemoriaCuatro()
     {
         mAnimator.SetTrigger("Memoria4");
+        contRecuerdos++;
     }
 
     public void MostrarMemoriaCinco()
     {
         mAnimator.SetTrigger("Memoria5");
+        contRecuerdos++;
     }
 
     public void MostrarMemoriaSeis()
     {
         mAnimator.SetTrigger("Memoria6");
+        contRecuerdos++;
     }
 
     public void MostrarMemoriaSiete()
     {
         mAnimator.SetTrigger("Memoria7");
+        contRecuerdos++;
     }
 }
